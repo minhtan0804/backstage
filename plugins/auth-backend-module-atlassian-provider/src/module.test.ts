@@ -59,7 +59,7 @@ describe('authModuleAtlassianProvider', () => {
     });
     expect(nonceCookie).toBeDefined();
 
-    const startUrl = new URL(res.get('location'));
+    const startUrl = new URL(res.get('location')!);
     expect(startUrl.origin).toBe('https://auth.atlassian.com');
     expect(startUrl.pathname).toBe('/authorize');
     expect(Object.fromEntries(startUrl.searchParams)).toEqual({
@@ -72,7 +72,7 @@ describe('authModuleAtlassianProvider', () => {
 
     expect(decodeOAuthState(startUrl.searchParams.get('state')!)).toEqual({
       env: 'development',
-      nonce: decodeURIComponent(nonceCookie.value),
+      nonce: decodeURIComponent(nonceCookie!.value),
     });
   });
   it('should start with and use custom scopes from scope config field', async () => {
@@ -115,7 +115,7 @@ describe('authModuleAtlassianProvider', () => {
     });
     expect(nonceCookie).toBeDefined();
 
-    const startUrl = new URL(res.get('location'));
+    const startUrl = new URL(res.get('location')!);
     expect(startUrl.origin).toBe('https://auth.atlassian.com');
     expect(startUrl.pathname).toBe('/authorize');
     expect(Object.fromEntries(startUrl.searchParams)).toEqual({
@@ -128,7 +128,7 @@ describe('authModuleAtlassianProvider', () => {
 
     expect(decodeOAuthState(startUrl.searchParams.get('state')!)).toEqual({
       env: 'development',
-      nonce: decodeURIComponent(nonceCookie.value),
+      nonce: decodeURIComponent(nonceCookie!.value),
     });
   });
   it('should start with and use custom scopes from scopes config field for backward compatibility', async () => {
@@ -171,7 +171,7 @@ describe('authModuleAtlassianProvider', () => {
     });
     expect(nonceCookie).toBeDefined();
 
-    const startUrl = new URL(res.get('location'));
+    const startUrl = new URL(res.get('location')!);
     expect(startUrl.origin).toBe('https://auth.atlassian.com');
     expect(startUrl.pathname).toBe('/authorize');
     expect(Object.fromEntries(startUrl.searchParams)).toEqual({
@@ -184,7 +184,7 @@ describe('authModuleAtlassianProvider', () => {
 
     expect(decodeOAuthState(startUrl.searchParams.get('state')!)).toEqual({
       env: 'development',
-      nonce: decodeURIComponent(nonceCookie.value),
+      nonce: decodeURIComponent(nonceCookie!.value),
     });
   });
 });

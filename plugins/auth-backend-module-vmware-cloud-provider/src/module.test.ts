@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 import { mockServices, startTestBackend } from '@backstage/backend-test-utils';
 import { decodeOAuthState } from '@backstage/plugin-auth-node';
 import request from 'supertest';
-
 import { Config } from '../config';
 import { authModuleVmwareCloudProvider } from './module';
 
@@ -65,7 +65,7 @@ describe('authModuleVmwareCloudProvider', () => {
     });
     expect(nonceCookie).toBeDefined();
 
-    const startUrl = new URL(res.get('location'));
+    const startUrl = new URL(res.get('location')!);
     expect(startUrl.origin).toBe('https://console.cloud.vmware.com');
     expect(startUrl.pathname).toBe('/csp/gateway/discovery');
     expect(Object.fromEntries(startUrl.searchParams)).toEqual({
@@ -82,7 +82,7 @@ describe('authModuleVmwareCloudProvider', () => {
     expect(decodeOAuthState(startUrl.searchParams.get('state')!)).toEqual({
       env: 'development',
       handle: expect.any(String),
-      nonce: decodeURIComponent(nonceCookie.value),
+      nonce: decodeURIComponent(nonceCookie!.value),
     });
 
     backend.stop();

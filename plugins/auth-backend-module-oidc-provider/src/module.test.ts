@@ -184,7 +184,7 @@ describe('authModuleOidcProvider', () => {
     });
     expect(nonceCookie).toBeDefined();
 
-    const startUrl = new URL(startResponse.get('location'));
+    const startUrl = new URL(startResponse.get('location')!);
     expect(startUrl.origin).toBe('https://oidc.test');
     expect(startUrl.pathname).toBe('/oauth2/authorize');
     expect(Object.fromEntries(startUrl.searchParams)).toEqual({
@@ -200,7 +200,7 @@ describe('authModuleOidcProvider', () => {
 
     expect(decodeOAuthState(startUrl.searchParams.get('state')!)).toEqual({
       env: 'development',
-      nonce: decodeURIComponent(nonceCookie.value),
+      nonce: decodeURIComponent(nonceCookie!.value),
     });
   });
 

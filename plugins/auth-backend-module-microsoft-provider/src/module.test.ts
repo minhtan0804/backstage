@@ -62,7 +62,7 @@ describe('authModuleMicrosoftProvider', () => {
     });
     expect(nonceCookie).toBeDefined();
 
-    const startUrl = new URL(res.get('location'));
+    const startUrl = new URL(res.get('location')!);
     expect(startUrl.origin).toBe('https://login.microsoftonline.com');
     expect(startUrl.pathname).toBe('/my-tenant-id/oauth2/v2.0/authorize');
     expect(Object.fromEntries(startUrl.searchParams)).toEqual({
@@ -75,7 +75,7 @@ describe('authModuleMicrosoftProvider', () => {
 
     expect(decodeOAuthState(startUrl.searchParams.get('state')!)).toEqual({
       env: 'development',
-      nonce: decodeURIComponent(nonceCookie.value),
+      nonce: decodeURIComponent(nonceCookie!.value),
     });
   });
 
@@ -120,7 +120,7 @@ describe('authModuleMicrosoftProvider', () => {
     });
     expect(nonceCookie).toBeDefined();
 
-    const startUrl = new URL(res.get('location'));
+    const startUrl = new URL(res.get('location')!);
     expect(startUrl.origin).toBe('https://login.microsoftonline.com');
     expect(startUrl.pathname).toBe('/another-tenant-id/oauth2/v2.0/authorize');
     expect(Object.fromEntries(startUrl.searchParams)).toEqual({
@@ -134,7 +134,7 @@ describe('authModuleMicrosoftProvider', () => {
 
     expect(decodeOAuthState(startUrl.searchParams.get('state')!)).toEqual({
       env: 'development',
-      nonce: decodeURIComponent(nonceCookie.value),
+      nonce: decodeURIComponent(nonceCookie!.value),
     });
   });
 });

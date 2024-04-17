@@ -16,7 +16,7 @@
 
 import { ConfigReader } from '@backstage/config';
 import express from 'express';
-import request, { SuperAgentTest } from 'supertest';
+import request from 'supertest';
 import cookieParser from 'cookie-parser';
 import PromiseRouter from 'express-promise-router';
 import { AuthProviderRouteHandlers, AuthResolverContext } from '../types';
@@ -82,7 +82,7 @@ function wrapInApp(handlers: AuthProviderRouteHandlers) {
   return app;
 }
 
-function getNonceCookie(test: SuperAgentTest) {
+function getNonceCookie(test: request.Agent) {
   return test.jar.getCookie('my-provider-nonce', {
     domain: '127.0.0.1',
     path: '/my-provider/handler',
@@ -91,7 +91,7 @@ function getNonceCookie(test: SuperAgentTest) {
   });
 }
 
-function getRefreshTokenCookie(test: SuperAgentTest) {
+function getRefreshTokenCookie(test: request.Agent) {
   return test.jar.getCookie('my-provider-refresh-token', {
     domain: '127.0.0.1',
     path: '/my-provider',
@@ -100,7 +100,7 @@ function getRefreshTokenCookie(test: SuperAgentTest) {
   });
 }
 
-function getGrantedScopesCookie(test: SuperAgentTest) {
+function getGrantedScopesCookie(test: request.Agent) {
   return test.jar.getCookie('my-provider-granted-scope', {
     domain: '127.0.0.1',
     path: '/my-provider',
@@ -149,7 +149,7 @@ describe('createOAuthRouteHandlers', () => {
         '/my-provider/start?env=development&scope=my-scope',
       );
 
-      const { value: nonce } = getNonceCookie(agent);
+      const { value: nonce } = getNonceCookie(agent)!;
 
       expect(res.text).toBe('');
       expect(res.status).toBe(302);
@@ -263,7 +263,7 @@ describe('createOAuthRouteHandlers', () => {
         },
       });
 
-      expect(getRefreshTokenCookie(agent).value).toBe('refresh-token');
+      expect(getRefreshTokenCookie(agent)!.value).toBe('refresh-token');
       expect(getGrantedScopesCookie(agent)).toBeUndefined();
     });
 
@@ -323,8 +323,8 @@ describe('createOAuthRouteHandlers', () => {
         },
       });
 
-      expect(getRefreshTokenCookie(agent).value).toBe('refresh-token');
-      expect(getGrantedScopesCookie(agent).value).toBe(
+      expect(getRefreshTokenCookie(agent)!.value).toBe('refresh-token');
+      expect(getGrantedScopesCookie(agent)!.value).toBe(
         'my-scope%20my-other-scope',
       );
     });
@@ -368,8 +368,8 @@ describe('createOAuthRouteHandlers', () => {
       expect(res.status).toBe(302);
       expect(res.get('Location')).toBe('https://127.0.0.1:3000/redirect');
 
-      expect(getRefreshTokenCookie(agent).value).toBe('refresh-token');
-      expect(getGrantedScopesCookie(agent).value).toBe(
+      expect(getRefreshTokenCookie(agent)!.value).toBe('refresh-token');
+      expect(getGrantedScopesCookie(agent)!.value).toBe(
         'my-scope%20my-other-scope',
       );
     });
@@ -618,7 +618,7 @@ describe('createOAuthRouteHandlers', () => {
           token: mockBackstageToken,
         },
       });
-      expect(getRefreshTokenCookie(agent).value).toBe('new-refresh-token');
+      expect(getRefreshTokenCookie(agent)!.value).toBe('new-refresh-token');
     });
 
     it('should forward errors', async () => {
@@ -703,7 +703,7 @@ describe('createOAuthRouteHandlers', () => {
         '/my-provider',
       );
 
-      expect(getRefreshTokenCookie(agent).value).toBe('my-refresh-token');
+      expect(getRefreshTokenCookie(agent)!.value).toBe('my-refresh-token');
 
       const res = await agent
         .post('/my-provider/logout')
