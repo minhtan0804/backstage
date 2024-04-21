@@ -1,5 +1,18 @@
 # @backstage/plugin-explore-backend
 
+## 0.0.29-next.0
+
+### Patch Changes
+
+- 2a5657e: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
+- Updated dependencies
+  - @backstage/plugin-explore-common@0.0.4-next.0
+  - @backstage/backend-common@0.21.8-next.0
+  - @backstage/backend-plugin-api@0.6.18-next.0
+  - @backstage/config@1.2.0
+  - @backstage/types@1.1.1
+  - @backstage/plugin-search-backend-module-explore@0.1.23-next.0
+
 ## 0.0.27
 
 ### Patch Changes

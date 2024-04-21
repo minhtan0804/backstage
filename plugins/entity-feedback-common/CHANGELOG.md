@@ -1,5 +1,11 @@
 # @backstage/plugin-entity-feedback-common
 
+## 0.1.5-next.0
+
+### Patch Changes
+
+- fd9024c: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
+
 ## 0.1.3
 
 ### Patch Changes

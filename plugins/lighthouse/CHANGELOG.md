@@ -1,5 +1,17 @@
 # @backstage/plugin-lighthouse
 
+## 0.4.21-next.0
+
+### Patch Changes
+
+- 53346b9: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
+- Updated dependencies
+  - @backstage/plugin-lighthouse-common@0.1.7-next.0
+  - @backstage/catalog-model@1.4.5
+  - @backstage/core-components@0.14.4
+  - @backstage/core-plugin-api@1.9.2
+  - @backstage/plugin-catalog-react@1.11.3
+
 ## 0.4.19
 
 ### Patch Changes

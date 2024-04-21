@@ -1,5 +1,15 @@
 # @backstage/plugin-azure-sites-common
 
+## 0.1.5-next.0
+
+### Patch Changes
+
+- be0fb7c: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
+- Updated dependencies
+  - @backstage/catalog-model@1.4.5
+  - @backstage/plugin-catalog-common@1.0.22
+  - @backstage/plugin-permission-common@0.7.13
+
 ## 0.1.3
 
 ### Patch Changes

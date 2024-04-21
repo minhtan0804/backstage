@@ -1,6 +1,6 @@
 {
   "name": "@backstage/plugin-sonarqube-react",
-  "version": "0.1.15",
+  "version": "0.1.17-next.0",
   "backstage": {
     "role": "web-library",
     "moved": "@backstage-community/plugin-sonarqube-react"

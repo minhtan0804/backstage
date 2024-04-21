@@ -1,5 +1,13 @@
 # @backstage/plugin-lighthouse-common
 
+## 0.1.7-next.0
+
+### Patch Changes
+
+- 53346b9: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
+- Updated dependencies
+  - @backstage/config@1.2.0
+
 ## 0.1.5
 
 ### Patch Changes

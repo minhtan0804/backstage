@@ -1,5 +1,15 @@
 # @backstage/plugin-airbrake-backend
 
+## 0.3.16-next.0
+
+### Patch Changes
+
+- 33573b5: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
+- Updated dependencies
+  - @backstage/backend-common@0.21.8-next.0
+  - @backstage/backend-plugin-api@0.6.18-next.0
+  - @backstage/config@1.2.0
+
 ## 0.3.14
 
 ### Patch Changes

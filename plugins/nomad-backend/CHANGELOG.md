@@ -1,5 +1,16 @@
 # @backstage/plugin-nomad-backend
 
+## 0.1.21-next.0
+
+### Patch Changes
+
+- 722a10c: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
+- Updated dependencies
+  - @backstage/backend-common@0.21.8-next.0
+  - @backstage/backend-plugin-api@0.6.18-next.0
+  - @backstage/config@1.2.0
+  - @backstage/errors@1.2.4
+
 ## 0.1.19
 
 ### Patch Changes

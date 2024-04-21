@@ -1,6 +1,6 @@
 {
   "name": "@backstage/plugin-linguist",
-  "version": "0.1.19",
+  "version": "0.1.21-next.0",
   "backstage": {
     "role": "frontend-plugin",
     "moved": "@backstage-community/plugin-linguist"

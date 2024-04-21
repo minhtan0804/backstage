@@ -1,5 +1,13 @@
 # @backstage/plugin-vault-node
 
+## 0.1.12-next.0
+
+### Patch Changes
+
+- f17c56d: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
+- Updated dependencies
+  - @backstage/backend-plugin-api@0.6.18-next.0
+
 ## 0.1.10
 
 ### Patch Changes

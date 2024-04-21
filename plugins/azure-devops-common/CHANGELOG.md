@@ -1,5 +1,14 @@
 # @backstage/plugin-azure-devops-common
 
+## 0.4.3-next.0
+
+### Patch Changes
+
+- 29314e1: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
+- Updated dependencies
+  - @backstage/plugin-catalog-common@1.0.22
+  - @backstage/plugin-permission-common@0.7.13
+
 ## 0.4.1
 
 ### Patch Changes

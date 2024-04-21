@@ -1,5 +1,14 @@
 # @backstage/plugin-rollbar-backend
 
+## 0.1.64-next.0
+
+### Patch Changes
+
+- 8d8e721: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
+- Updated dependencies
+  - @backstage/backend-common@0.21.8-next.0
+  - @backstage/config@1.2.0
+
 ## 0.1.62
 
 ### Patch Changes

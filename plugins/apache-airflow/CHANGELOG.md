@@ -1,5 +1,14 @@
 # @backstage/plugin-apache-airflow
 
+## 0.2.26-next.0
+
+### Patch Changes
+
+- 1651b0f: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
+- Updated dependencies
+  - @backstage/core-components@0.14.4
+  - @backstage/core-plugin-api@1.9.2
+
 ## 0.2.24
 
 ### Patch Changes

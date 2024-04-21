@@ -1,5 +1,20 @@
 # @backstage/plugin-linguist
 
+## 0.1.21-next.0
+
+### Patch Changes
+
+- 203826e: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
+- Updated dependencies
+  - @backstage/plugin-linguist-common@0.1.4-next.0
+  - @backstage/catalog-model@1.4.5
+  - @backstage/core-compat-api@0.2.4
+  - @backstage/core-components@0.14.4
+  - @backstage/core-plugin-api@1.9.2
+  - @backstage/errors@1.2.4
+  - @backstage/frontend-plugin-api@0.6.4
+  - @backstage/plugin-catalog-react@1.11.3
+
 ## 0.1.19
 
 ### Patch Changes

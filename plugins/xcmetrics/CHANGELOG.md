@@ -1,5 +1,15 @@
 # @backstage/plugin-xcmetrics
 
+## 0.2.54-next.0
+
+### Patch Changes
+
+- a5613e3: These packages have been migrated to the [backstage/community-plugins](https://github.com/backstage/community-plugins) repository.
+- Updated dependencies
+  - @backstage/core-components@0.14.4
+  - @backstage/core-plugin-api@1.9.2
+  - @backstage/errors@1.2.4
+
 ## 0.2.52
 
 ### Patch Changes
