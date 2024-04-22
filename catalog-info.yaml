@@ -28,5 +28,5 @@ spec:
   type: service
   owner: CNCF
   lifecycle: experimental
-  dependsOn: ['resource:artists-db']
+  dependsOn: ['artists-db']
   apiConsumedBy: ['component:www-artist']
