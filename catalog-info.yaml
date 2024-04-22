@@ -22,7 +22,7 @@ metadata:
     backstage.io/techdocs-ref: dir:.
     lighthouse.com/website-url: https://backstage.io
 spec:
-  type: library
+  type: service
   owner: CNCF
   lifecycle: experimental
   dependsOn: ['resource:artists-db']
