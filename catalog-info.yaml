@@ -28,5 +28,6 @@ spec:
   type: service
   owner: CNCF
   lifecycle: experimental
-  dependsOn: ['artists-db']
   apiConsumedBy: ['component:www-artist']
+  definition:
+    $text: https://petstore.swagger.io/v2/swagger.json
