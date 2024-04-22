@@ -4,6 +4,9 @@ metadata:
   name: backstage-demo
   description: |
     Backstage is an open-source developer portal that puts the developer experience first.
+  tags:
+    - nodejs
+    - react
   links:
     - title: Website
       url: http://backstage.io
@@ -13,6 +16,7 @@ metadata:
       url: https://backstage.io/storybook
     - title: Discord Chat
       url: https://discord.com/invite/EBHEGzX
+  
   annotations:
     github.com/project-slug: backstage/backstage
     backstage.io/techdocs-ref: dir:.
