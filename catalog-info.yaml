@@ -26,8 +26,9 @@ metadata:
     backstage.io/linguist: 'https://github.com/backstage/backstage/tree/master/plugins/playlist'
 spec:
   type: service
-  owner: CNCF
+  owner: user:CNCF
   lifecycle: experimental
+  system: audio-playback
   apiConsumedBy: ['component:www-artist']
   definition:
     $text: https://petstore.swagger.io/v2/swagger.json
